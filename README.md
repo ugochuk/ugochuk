@@ -2,7 +2,7 @@
 
 ### Senior Cloud / DevOps Engineer
 
-**Azure • AWS • Terraform • Kubernetes • AKS • EKS • Azure DevOps • GitHub Actions • Python • Boto3 • OPA/Rego • CloudFormation • Cloud Networking • Security & Governance**
+**Azure • AWS • Terraform • Kubernetes • AKS • EKS • Observability • OpenTelemetry • Prometheus • Grafana • Azure Monitor • CloudWatch • CI/CD • Python • OPA/Rego**
 
 I design and automate enterprise cloud platforms with a focus on Infrastructure as Code, CI/CD, Kubernetes, policy as code, private networking, identity, and operational automation. This GitHub profile contains sanitized reference implementations of engineering patterns I have worked with professionally. It does not contain employer or customer proprietary code.
 
@@ -13,6 +13,7 @@ I design and automate enterprise cloud platforms with a focus on Infrastructure 
 | Infrastructure as Code | Reusable Terraform modules, Azure foundations, AKS/EKS platforms and CloudFormation patterns |
 | CI/CD | Terraform validation, planning, security/policy gates and post-deployment validation |
 | Kubernetes | AKS and EKS infrastructure, Kubernetes workloads, autoscaling, ingress and release validation |
+| Observability & SRE | Metrics, logs, traces, SLOs, error budgets, dashboards, alerting and incident runbooks across Azure and AWS |
 | Policy as Code | OPA/Rego controls, policy tests, Terraform plan evaluation and Azure Policy |
 | Python Automation | Terraform plan analysis, Kubernetes release validation and AWS multi-account resource inventory |
 | Cloud Security | IAM/RBAC, managed identities, private connectivity, Key Vault and policy guardrails |
@@ -20,10 +21,10 @@ I design and automate enterprise cloud platforms with a focus on Infrastructure 
 
 ## Featured Projects
 
-### [AWS / Terraform Engineering Lab](https://github.com/ugochuk/terraform-learning/tree/main/aws)
-AWS engineering portfolio covering a reusable EKS platform in Terraform, Python/Boto3 multi-account resource discovery, CloudFormation supporting infrastructure and CI validation. The inventory utility assumes read-only roles across accounts and normalizes EC2, VPC, subnet and security-group information for migration discovery and architecture planning.
+### [Multi-Cloud Observability Platform](https://github.com/ugochuk/cloud-observability-platform)
+Production-minded observability reference implementation for AKS and EKS. Uses Terraform and OpenTelemetry to connect application and Kubernetes telemetry with Azure Monitor, Application Insights, Log Analytics, Amazon CloudWatch, AWS X-Ray, managed Prometheus and managed Grafana. Includes SLOs, error budgets, alert rules, dashboards and evidence-driven incident runbooks.
 
-**Technologies:** AWS • EKS • Terraform • Python • Boto3 • CloudFormation • IAM • VPC • ECR • GitHub Actions
+**Technologies:** Azure • AWS • AKS • EKS • Terraform • OpenTelemetry • Prometheus • Grafana • Azure Monitor • Application Insights • Log Analytics • CloudWatch • X-Ray • SLOs • Alerting
 
 ### [AKS Platform with Terraform](https://github.com/ugochuk/aks-platform-terraform)
 Production-minded AKS reference architecture with Terraform and Kubernetes manifests. Includes Python release-validation automation that evaluates desired, available, ready and updated replicas plus rollout health so CI/CD can fail fast when deployments are unhealthy.
@@ -49,12 +50,12 @@ Infrastructure delivery workflow demonstrating Terraform validation, planning, s
 
 | Professional capability | Portfolio evidence |
 |---|---|
-| Reusable Terraform infrastructure | `azure-enterprise-landing-zone/modules/`, `aks-platform-terraform/terraform/`, `terraform-learning/aws/eks-platform/` |
+| Reusable Terraform infrastructure | `azure-enterprise-landing-zone/modules/`, `aks-platform-terraform/terraform/`, `cloud-observability-platform/terraform/` |
 | Terraform plan automation with Python | `azure-enterprise-landing-zone/scripts/terraform_plan_summary.py` |
 | Automated AKS release validation | `aks-platform-terraform/scripts/validate_aks_release.py` |
-| AWS multi-account inventory with Python/Boto3 | `terraform-learning/aws/multi-account-inventory/inventory.py` |
-| EKS platform architecture | `terraform-learning/aws/eks-platform/` |
-| CloudFormation infrastructure | `terraform-learning/aws/cloudformation/` |
+| Multi-cloud observability | `cloud-observability-platform/terraform/`, `kubernetes/`, `dashboards/`, `slos/` and `runbooks/` |
+| AWS observability infrastructure | `cloud-observability-platform/terraform/aws/` |
+| Azure observability infrastructure | `cloud-observability-platform/terraform/azure/` |
 | Kubernetes workload configuration | `aks-platform-terraform/kubernetes/` |
 | OPA/Rego policy as code | `azure-policy-opa-governance/policies/` and `tests/` |
 | CI/CD automation | `.github/workflows/` across the portfolio |
@@ -67,8 +68,9 @@ Infrastructure delivery workflow demonstrating Terraform validation, planning, s
 **Policy as Code:** OPA/Rego, Azure Policy  
 **CI/CD:** Azure DevOps, GitHub Actions, YAML pipelines, Git  
 **Automation:** Python, Boto3, Go, PowerShell, Azure CLI, REST APIs, JSON, YAML  
-**Azure:** VNets, Private Endpoints, Private DNS, Key Vault, Managed Identities, RBAC, ACR, Azure Monitor, App Service, Functions, Cosmos DB, Azure SQL, Storage  
-**AWS:** EC2, VPC, subnets, security groups, IAM, EKS, ECR, CloudFormation, multi-account automation
+**Observability:** OpenTelemetry, Prometheus, Grafana, metrics, logs, traces, SLIs, SLOs, error budgets, alerting, dashboards, incident runbooks  
+**Azure:** VNets, Private Endpoints, Private DNS, Key Vault, Managed Identities, RBAC, ACR, Azure Monitor, Application Insights, Log Analytics, App Service, Functions, Cosmos DB, Azure SQL, Storage  
+**AWS:** EC2, VPC, subnets, security groups, IAM, EKS, ECR, CloudFormation, CloudWatch, X-Ray, Amazon Managed Prometheus, Amazon Managed Grafana, SNS, multi-account automation
 
 ## Architecture Approach
 
